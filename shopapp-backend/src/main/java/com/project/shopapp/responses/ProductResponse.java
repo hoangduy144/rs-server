@@ -24,6 +24,7 @@ public class ProductResponse extends BaseResponse{
     private String thumbnail;
     private String description;
     @JsonProperty("product_images")
+    @Builder.Default
     private List<ProductImage> productImages = new ArrayList<>();
 
     @JsonProperty("category_id")

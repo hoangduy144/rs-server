@@ -104,54 +104,10 @@
 
 	<build>
 		<plugins>
-			<!-- Plugin để tạo file JAR -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.2.0</version>
-				<executions>
-					<execution>
-						<id>default-jar</id>
-						<phase>none</phase>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- Plugin để tạo file JAR với dependencies -->
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.5.0</version>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>com.example.shopapp.ShopappApplication</mainClass> <!-- Thay thế bằng tên đầy đủ của lớp chính của bạn -->
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-				<executions>
-					<execution>
-						<id>make-assembly</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
 			<!-- Plugin cho Spring Boot để đóng gói thành file JAR có thể thực thi -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
 				<configuration>
 					<excludes>
 						<exclude>
