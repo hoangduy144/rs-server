@@ -2,10 +2,10 @@ server:
   port: 8088  
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/ShopApp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://sql12.freesqldatabase.com:3306/sql12714640
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password:
+    username: sql12714640
+    password: N54eLb4BwP
   jpa:
     show-sql: true
     hibernate:
